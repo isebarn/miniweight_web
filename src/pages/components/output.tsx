@@ -1,5 +1,15 @@
+enum WeekDay {
+  'monday' = 0,
+  'tuesday' = 1,
+  'wednesday' = 2,
+  'thursday' = 3,
+  'friday' = 4,
+  'saturday' = 5,
+  'sunday' = 6,
+}
+
 export interface Output {
-  day: number
+  day?: number
   breakfast: string
   snack1: string
   lunch: string
@@ -20,9 +30,9 @@ export function Output(props: OutputProps) {
       <div>
         <p>{"Sure, here's a 7-day Diet Plan for you:"}</p>
         <br />
-        {props.output.map(o => (
-          <div key={o.day} className="mb-12">
-            <p className="mb-2 font-bold">Day {o.day}</p>
+        {props.output.map((o, index) => (
+          <div key={WeekDay[index]} className="mb-12">
+            <p className="mb-2 font-bold">Day {WeekDay[index]}</p>
             <p>Breakfast</p>
             <p>{o.breakfast}</p>
             <br />
