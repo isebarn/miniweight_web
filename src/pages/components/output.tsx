@@ -32,7 +32,7 @@ export function Output(props: OutputProps) {
         <br />
         {props.output.map((o, index) => (
           <div key={WeekDay[index]} className="mb-12">
-            <p className="mb-2 font-bold">Day {WeekDay[index]}</p>
+            <p className="mb-2 font-bold capitalize">{WeekDay[index]}</p>
             <p>Breakfast</p>
             <p>{o.breakfast}</p>
             <br />
