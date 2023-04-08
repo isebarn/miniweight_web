@@ -21,7 +21,7 @@ export interface OutputProps {
   loading?: boolean
   output?: DayMeals[]
 }
-export function Output(props: OutputProps) {
+export default function Output(props: OutputProps) {
   if (props.loading) {
     return <div>Loading...</div>
   }

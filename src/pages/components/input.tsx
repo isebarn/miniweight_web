@@ -16,7 +16,7 @@ export interface PersonDetails {
 export interface InputProps {
   onSubmit?: (details: PersonDetails) => void
 }
-export function Input(props: InputProps = {}) {
+export default function Input(props: InputProps = {}) {
   const [gender, setGender] = useState(Gender.m)
   const [age, setAge] = useState(20)
   const [height, setHeight] = useState(175)

@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
-import { Input, PersonDetails } from '@/pages/components/input'
-import { DayMeals, Output } from '@/pages/components/output'
+import Input, { PersonDetails } from '@/pages/components/input'
+import Output, { DayMeals } from '@/pages/components/output'
 
 const fetchMeals = async (details: PersonDetails): Promise<DayMeals[]> => {
   const myHeaders = new Headers()
