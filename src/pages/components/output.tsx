@@ -8,7 +8,7 @@ enum WeekDay {
   'sunday' = 6,
 }
 
-export interface Output {
+export interface DayMeals {
   day?: number
   breakfast: string
   snack1: string
@@ -19,13 +19,13 @@ export interface Output {
 
 export interface OutputProps {
   loading?: boolean
-  output?: Output[]
+  output?: DayMeals[]
 }
 export function Output(props: OutputProps) {
   if (props.loading) {
     return <div>Loading...</div>
   }
-  if (props.output) {
+  if (props.output?.length) {
     return (
       <div>
         <p>{"Sure, here's a 7-day Diet Plan for you:"}</p>
@@ -52,5 +52,5 @@ export function Output(props: OutputProps) {
       </div>
     )
   }
-  return <div>Output</div>
+  return <div></div>
 }
