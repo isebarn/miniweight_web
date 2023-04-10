@@ -53,7 +53,7 @@ export default function Home() {
                 }
               }}
             />
-            <div className="pl-8">
+            <div className="pl-8 col-span-2">
               <Output output={output} loading={loading} />
             </div>
           </div>

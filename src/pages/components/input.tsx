@@ -40,19 +40,19 @@ export default function Input(props: InputProps = {}) {
     >
       <div className="grid cols-1 gap-6">
         <label className="block">
-          <span className="text-gray-700">Gender *</span>
+          <span className="text-gray-700">Genre *</span>
           <select
             className="form-select mt-1 block w-full"
             onChange={e => setGender(e.target.value as Gender)}
             value={gender}
             required={true}
           >
-            <option value={Gender.m}>Male</option>
-            <option value={Gender.f}>Female</option>
+            <option value={Gender.m}>Homme</option>
+            <option value={Gender.f}>Femme</option>
           </select>
         </label>
         <label className="block">
-          <span className="text-gray-700">Age *</span>
+          <span className="text-gray-700">Âge *</span>
           <input
             type="number"
             className="form-input mt-1 block w-full"
@@ -62,7 +62,7 @@ export default function Input(props: InputProps = {}) {
           />
         </label>
         <label className="block">
-          <span className="text-gray-700">Height *</span>
+          <span className="text-gray-700">Hauteur *</span>
           {/*<div className="grid grid-cols-2 grid-rows-1">*/}
           <input
             type="number"
@@ -74,7 +74,7 @@ export default function Input(props: InputProps = {}) {
           />
         </label>
         <label className="block">
-          <span className="text-gray-700">Weight *</span>
+          <span className="text-gray-700">Lester *</span>
           <input
             type="number"
             className="form-input mt-1 block w-full"
@@ -85,7 +85,7 @@ export default function Input(props: InputProps = {}) {
           />
         </label>
         <label className="block">
-          <span className="text-gray-700">Target Weight *</span>
+          <span className="text-gray-700">Poids ciblé *</span>
           <input
             type="number"
             className="form-input mt-1 block w-full"

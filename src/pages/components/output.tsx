@@ -1,11 +1,11 @@
 enum WeekDay {
-  'monday' = 0,
-  'tuesday' = 1,
-  'wednesday' = 2,
-  'thursday' = 3,
-  'friday' = 4,
-  'saturday' = 5,
-  'sunday' = 6,
+  'lundi' = 0,
+  'mardi' = 1,
+  'mecredi' = 2,
+  'jeudi' = 3,
+  'vendredi' = 4,
+  'samedi' = 5,
+  'dimanche' = 6,
 }
 
 export interface DayMeals {
@@ -23,29 +23,29 @@ export interface OutputProps {
 }
 export default function Output(props: OutputProps) {
   if (props.loading) {
-    return <div>Loading...</div>
+    return <div>Chargement...</div>
   }
   if (props.output?.length) {
     return (
       <div>
-        <p>{"Sure, here's a 7-day Diet Plan for you:"}</p>
+        <p>{'Bien sûr, voici un plan de régime de 7 jours pour vous:'}</p>
         <br />
         {props.output.map((o, index) => (
           <div key={WeekDay[index]} className="mb-12">
             <p className="mb-2 font-bold capitalize">{WeekDay[index]}</p>
-            <p>Breakfast</p>
+            <p>Petit-déjeuner</p>
             <p>{o.breakfast}</p>
             <br />
-            <p>Snack 1</p>
+            <p>Collation 1</p>
             <p>{o.snack1}</p>
             <br />
-            <p>Lunch</p>
+            <p>Déjeuner</p>
             <p>{o.lunch}</p>
             <br />
-            <p>Snack 2</p>
+            <p>Collation 2</p>
             <p>{o.snack2}</p>
             <br />
-            <p>Dinner</p>
+            <p>Dîner</p>
             <p>{o.dinner}</p>
           </div>
         ))}
