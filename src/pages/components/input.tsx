@@ -40,7 +40,7 @@ export default function Input(props: InputProps = {}) {
     >
       <div className="grid cols-1 gap-6">
         <label className="block">
-          <span className="text-gray-700">Genre *</span>
+          <span className="text-gray-700">Sexe *</span>
           <select
             className="form-select mt-1 block w-full"
             onChange={e => setGender(e.target.value as Gender)}
@@ -62,8 +62,7 @@ export default function Input(props: InputProps = {}) {
           />
         </label>
         <label className="block">
-          <span className="text-gray-700">Hauteur *</span>
-          {/*<div className="grid grid-cols-2 grid-rows-1">*/}
+          <span className="text-gray-700">Taille (cm) *</span>
           <input
             type="number"
             className="form-input mt-1 block w-full"
@@ -74,7 +73,7 @@ export default function Input(props: InputProps = {}) {
           />
         </label>
         <label className="block">
-          <span className="text-gray-700">Lester *</span>
+          <span className="text-gray-700">Poids (kg) *</span>
           <input
             type="number"
             className="form-input mt-1 block w-full"
@@ -94,7 +93,12 @@ export default function Input(props: InputProps = {}) {
             required={true}
           />
         </label>
-        <input className="font-sans bg-blue-800 text-white p-2" type="submit" />
+        <input
+          className="font-sans bg-blue-800 text-white p-2"
+          type="submit"
+          placeholder="Soumettre"
+          value="Soumettre"
+        />
       </div>
     </form>
   )
